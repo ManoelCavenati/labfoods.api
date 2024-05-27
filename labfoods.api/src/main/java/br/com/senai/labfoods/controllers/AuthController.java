@@ -15,7 +15,7 @@ public class AuthController {
     public ResponseEntity<String> login() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication.isAuthenticated()) {
-            return ResponseEntity.ok("Login successful! Welcome " + authentication.getName());
+            return ResponseEntity.ok("Login successful! Bem-vindo ao Labfood " + authentication.getName());
         } else {
             return ResponseEntity.status(401).body("Login failed");
         }
